@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Kelly Ankoue</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-header{padding:4rem 0 3rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.page-header h1{font-family:var(--serif);font-size:clamp(36px,5vw,56px);font-weight:400;letter-spacing:-0.025em}
+.page-header p{font-size:14px;color:var(--ink-3);margin-top:0.5rem;font-weight:300}
+.r-section{padding:3rem 0;border-bottom:1px solid var(--rule)}
+.r-section:last-child{border-bottom:none}
+.r-row{display:grid;grid-template-columns:160px 1fr;gap:2.5rem;padding:1.75rem 0;border-top:1px solid var(--paper-3)}
+.r-row:first-child{border-top:none}
+.r-date{font-size:12px;color:var(--ink-4);font-family:var(--serif);font-style:italic;padding-top:2px;line-height:1.6}
+.r-title{font-size:15px;font-weight:500;margin-bottom:0.15rem}
+.r-org{font-size:13px;color:var(--ink-3);margin-bottom:0.6rem}
+.r-desc{font-size:13px;color:var(--ink-2);line-height:1.8;font-weight:300}
+.r-desc ul{padding-left:0;list-style:none}
+.r-desc li{padding:0.3rem 0;display:flex;gap:8px}
+.r-desc li::before{content:'-';color:var(--gold);flex-shrink:0}
+.skills-block{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.skill-row-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.skill-row-pills{}
+@media(max-width:600px){.r-row{grid-template-columns:1fr;gap:0.5rem}.skills-block{grid-template-columns:1fr}.page-header{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Kelly Ankoue<span class="nav-dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <div class="page-header">
+      <div>
+        <h1>Resume</h1>
+        <p>Entry-level UX designer - open to full-time roles in product design and UX research.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-shrink:0">
+        <a href="files/Kelly_Ankoue_Resume.pdf" download class="btn btn-dark">Download &darr;</a>
+        <a href="mailto:kellyankoue03@gmail.com" class="btn btn-outline">Email me</a>
+      </div>
+    </div>
+
+    <section class="r-section">
+      <p class="section-eyebrow">Education</p>
+      <div class="r-row">
+        <div class="r-date">May 2026</div>
+        <div><div class="r-title">M.A. in Ethics and Society</div><div class="r-org">Fordham University - New York, NY</div><div class="r-desc">Concentration: Ethics, Law and Policy</div></div>
+      </div>
+      <div class="r-row">
+        <div class="r-date">May 2025</div>
+        <div><div class="r-title">B.A. in Information Science</div><div class="r-org">Cornell University - Ithaca, NY</div><div class="r-desc">Concentrations: UX Design &middot; Law, Ethics and Policy</div></div>
+      </div>
+    </section>
+
+    <section class="r-section">
+      <p class="section-eyebrow">Design experience</p>
+      <div class="r-row">
+        <div class="r-date">Spring 2026</div>
+        <div>
+          <div class="r-title">UX Designer and Researcher - Healing Without Bias</div>
+          <div class="r-org">Capstone project</div>
+          <div class="r-desc"><ul>
+            <li>Designed a 6-page accessible digital platform making healthcare law and Medicaid policy readable for users with no legal background</li>
+            <li>Ran iterative content and layout audits, refining hierarchy and wayfinding across multiple review cycles</li>
+            <li>Grounded every design decision in original policy research on structural racism and the Medicaid coverage gap</li>
+          </ul></div>
+          <div style="margin-top:0.75rem"><span class="pill">UX research</span><span class="pill">Content strategy</span><span class="pill">Accessibility</span></div>
+        </div>
+      </div>
+      <div class="r-row">
+        <div class="r-date">May 2024</div>
+        <div>
+          <div class="r-title">Lead UX Designer - Nexus</div>
+          <div class="r-org">Social platform for transfer students</div>
+          <div class="r-desc"><ul>
+            <li>Led end-to-end UX design for a mobile platform addressing institutional barriers for transfer students</li>
+            <li>Ran 10+ user interviews; redesigned navigation based on findings, improving resource access efficiency by 30%</li>
+            <li>Delivered full Figma prototype across two tested iterations with documented design rationale</li>
+          </ul></div>
+          <div style="margin-top:0.75rem"><span class="pill">Figma</span><span class="pill">User interviews</span><span class="pill">Mobile design</span></div>
+        </div>
+      </div>
+      <div class="r-row">
+        <div class="r-date">Spring 2025</div>
+        <div>
+          <div class="r-title">UX Designer and Developer - Ithaca Soap</div>
+          <div class="r-org">INFO 4340: App Development and Prototyping &middot; Cornell University</div>
+          <div class="r-desc"><ul>
+            <li>Designed mobile and web app for a real client through a full semester of research, prototyping, usability testing, and iterative refinement</li>
+            <li>Collaborated cross-functionally across design and development, delivering a fully coded high-fidelity prototype using Git workflows and real development tools</li>
+            <li>Built affinity diagrams to synthesize interview findings into solution themes, driving design decisions across multiple brainstorm and iteration cycles</li>
+            <li>Delivered an accessible, functional app meeting all client and user goals - validated through usability testing and presented to Ithaca Soap at key milestones</li>
+          </ul></div>
+          <div style="margin-top:0.75rem"><span class="pill">Client collaboration</span><span class="pill">Affinity diagrams</span><span class="pill">Mobile and web</span><span class="pill">Accessibility</span><span class="pill">Cross-functional</span></div>
+          <div style="margin-top:1rem;display:flex;gap:8px">
+            <a href="https://cornell-info4340-2025sp.github.io/chatgpteaa-project/" target="_blank" style="font-size:12px;color:var(--clay);text-decoration:none;border-bottom:1px solid var(--rule)">View mobile site &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="r-row">
+        <div class="r-date">Jan&ndash;May 2023</div>
+        <div>
+          <div class="r-title">UX Designer and Strategist - TikTok Creator Tools</div>
+          <div class="r-org">Case study</div>
+          <div class="r-desc"><ul>
+            <li>Identified usability gaps and misinformation risks through heuristic analysis; redesigned flows with transparency indicators and friction prompts</li>
+            <li>Built and iterated high-fidelity Figma prototypes validated through usability testing over a 10-week sprint</li>
+          </ul></div>
+          <div style="margin-top:0.75rem"><span class="pill">Figma</span><span class="pill">Heuristic analysis</span><span class="pill">Prototyping</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="r-section">
+      <p class="section-eyebrow">Relevant experience</p>
+      <div class="r-row">
+        <div class="r-date">Aug 2025&ndash;May 2026</div>
+        <div>
+          <div class="r-title">Graduate Assistant - Fordham University</div>
+          <div class="r-org">Ethics and Society Dept.</div>
+          <div class="r-desc"><ul>
+            <li>Produced policy briefs and research documents for 3 department heads under tight deadlines</li>
+            <li>Reviewed and edited 25+ published articles, coordinating multi-stakeholder feedback cycles</li>
+            <li>Maintained communications systems and tracked engagement metrics across platforms</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="r-section">
+      <p class="section-eyebrow">Skills</p>
+      <div class="skills-block">
+        <div><div class="skill-row-label">UX and design</div><div><span class="pill">Figma</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Info architecture</span><span class="pill">Usability testing</span><span class="pill">Accessibility</span><span class="pill">Content strategy</span></div></div>
+        <div><div class="skill-row-label">Research</div><div><span class="pill">User interviews</span><span class="pill">Heuristic analysis</span><span class="pill">Affinity mapping</span><span class="pill">Qualitative methods</span><span class="pill">Policy research</span></div></div>
+        <div style="margin-top:1.5rem"><div class="skill-row-label">Technical</div><div><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">Data visualization</span><span class="pill">AI governance</span></div></div>
+        <div style="margin-top:1.5rem"><div class="skill-row-label">Languages</div><div><span class="pill">English (native)</span><span class="pill">French (intermediate)</span><span class="pill">Spanish (intermediate)</span></div></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Kelly Ankoue</span>
+    <div class="footer-links">
+      <a href="mailto:kellyankoue03@gmail.com">kellyankoue03@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kelly-ankoue-128665218/" target="_blank">LinkedIn</a>
+      <a href="files/Kelly_Ankoue_Resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelly Ankoue - UX Designer</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{padding:6rem 0 5rem;border-bottom:1px solid var(--rule)}
+.hero-kicker{
+  display:flex;align-items:center;gap:12px;margin-bottom:2rem;
+}
+.hero-kicker-line{width:40px;height:1px;background:var(--clay-new)}
+.hero-kicker-text{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold)}
+.hero-headline{
+  font-family:var(--serif);font-size:clamp(48px,7vw,80px);
+  font-weight:400;line-height:1.02;letter-spacing:-0.03em;
+  margin-bottom:2.5rem;max-width:720px;
+}
+.hero-headline em{font-style:italic;color:var(--gold)}
+.hero-sub{
+  font-size:17px;line-height:1.8;color:var(--ink-2);
+  max-width:520px;margin-bottom:2.5rem;font-weight:300;
+}
+.hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.hero-scroll-note{font-size:12px;color:var(--ink-4);margin-left:4px}
+
+.intro-strip{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  border-bottom:1px solid var(--rule);
+}
+.intro-cell{
+  padding:2.5rem 0;border-right:1px solid var(--rule);
+}
+.intro-cell:last-child{border-right:none;padding-left:2.5rem}
+.intro-cell:first-child{padding-right:2.5rem}
+.intro-cell:nth-child(2){padding:2.5rem}
+.intro-cell-num{
+  font-family:var(--serif);font-size:52px;font-weight:400;
+  color:var(--ink);line-height:1;margin-bottom:0.35rem;
+  letter-spacing:-0.03em;
+}
+.intro-cell-num sup{font-size:22px;vertical-align:super}
+.intro-cell-label{font-size:13px;color:var(--ink-3);line-height:1.5}
+
+.work-section{padding:3.5rem 0}
+.work-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem}
+.work-header h2{font-family:var(--serif);font-size:36px;font-weight:400;letter-spacing:-0.02em}
+
+.project-row{
+  display:grid;grid-template-columns:80px 1fr 220px;
+  gap:0 2.5rem;
+  align-items:start;
+  padding:2.5rem 0;
+  border-top:1px solid var(--rule);
+  text-decoration:none;
+  transition:background .15s;
+  cursor:pointer;
+}
+.project-row:last-child{border-bottom:1px solid var(--rule)}
+.project-row:hover .project-row-title{color:var(--gold)}
+.project-row:hover .project-arrow{transform:translate(4px,-4px)}
+.project-row-index{
+  font-family:var(--serif);font-size:13px;color:#E8728A !important;
+  padding-top:4px;font-style:italic;
+}
+.project-row .project-row-index{color:#E8728A !important;}
+.project-row-title{
+  font-family:var(--serif);font-size:26px;font-weight:400;
+  letter-spacing:-0.02em;margin-bottom:0.5rem;transition:color .2s;
+}
+.project-row-desc{font-size:14px;color:var(--ink-3);line-height:1.7;max-width:460px}
+.project-row-meta{padding-top:4px}
+.project-row-tag{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-4);margin-bottom:0.75rem}
+.project-row-pills{display:flex;flex-wrap:wrap;gap:5px}
+.project-arrow{
+  display:inline-block;font-size:18px;color:var(--gold);
+  margin-left:8px;transition:transform .2s;
+}
+
+.about-section{
+  padding:5rem 0;border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;
+}
+.about-section h2{font-family:var(--serif);font-size:36px;font-weight:400;letter-spacing:-0.02em;margin-bottom:2rem}
+.about-text{font-size:15px;color:var(--ink-2);line-height:1.85;font-weight:300}
+.about-text p+p{margin-top:1.1rem}
+.about-right{}
+.skill-group{margin-bottom:2rem}
+.skill-group-label{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid var(--gold-light)}
+.skill-list{font-size:13px;color:var(--ink-2);line-height:1.9}
+
+.cta-section{
+  border-top:1px solid var(--rule);
+  padding:5rem 0;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.cta-section h2{font-family:var(--serif);font-size:40px;font-weight:400;font-style:italic;letter-spacing:-0.02em}
+.cta-section p{font-size:14px;color:var(--ink-3);margin-top:0.5rem}
+.cta-actions{display:flex;gap:10px;flex-shrink:0}
+
+@media(max-width:720px){
+  .intro-strip{grid-template-columns:1fr}
+  .intro-cell{border-right:none;border-bottom:1px solid var(--rule);padding:1.75rem 0!important}
+  .project-row{grid-template-columns:1fr;gap:1rem}
+  .project-row-meta{display:none}
+  .about-section{grid-template-columns:1fr;gap:3rem}
+  .cta-section{flex-direction:column;align-items:flex-start}
+}
+
+.marquee-strip {
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  overflow:hidden;
+  padding:0.85rem 0;
+  background:var(--paper-2);
+  white-space:nowrap;
+}
+.marquee-track {
+  display:inline-block;
+  animation:marquee 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state:paused; cursor:default; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-item {
+  display:inline-block;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin-right:3rem;
+}
+.marquee-item span { color:var(--gold); margin-right:3rem; }
+
+.voice-block {
+  padding:4rem 0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:3fr 2fr;
+  gap:4rem;
+  align-items:center;
+}
+.voice-quote {
+  font-family:var(--serif);
+  font-size:clamp(22px,3vw,32px);
+  font-weight:400;
+  font-style:italic;
+  line-height:1.4;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+.voice-quote em { color:var(--gold); font-style:normal; }
+.voice-attr { font-size:12px; color:var(--ink-4); margin-top:1rem; letter-spacing:0.08em; text-transform:uppercase; }
+.voice-context { font-size:14px; color:var(--ink-3); line-height:1.8; font-weight:300; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Kelly Ankoue<span class="nav-dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="hero-kicker">
+        <span class="hero-kicker-line"></span>
+        <span class="hero-kicker-text">UX Designer - New York, 2026</span>
+      </div>
+      <h1 class="hero-headline">
+        Design that makes<br>
+        <em>complex things clear</em>
+      </h1>
+      <p class="hero-sub">I work at the intersection of policy, ethics, and technology - translating dense legal content into digital products that serve the communities most often left out.</p>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-dark">View my work &rarr;</a>
+        <a href="mailto:kellyankoue03@gmail.com" class="btn btn-outline">Get in touch</a>
+        <a href="files/Kelly_Ankoue_Resume.pdf" download class="btn btn-outline">Resume &darr;</a>
+        <span class="hero-scroll-note">Cornell &middot; Fordham &middot; Open to roles</span>
+      </div>
+    </section>
+
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">UX Research <span>&middot;</span></span>
+        <span class="marquee-item">Healthcare Policy <span>&middot;</span></span>
+        <span class="marquee-item">Figma <span>&middot;</span></span>
+        <span class="marquee-item">Accessibility <span>&middot;</span></span>
+        <span class="marquee-item">Ethical Design <span>&middot;</span></span>
+        <span class="marquee-item">Content Strategy <span>&middot;</span></span>
+        <span class="marquee-item">Civil Rights <span>&middot;</span></span>
+        <span class="marquee-item">Usability Testing <span>&middot;</span></span>
+        <span class="marquee-item">AI Governance <span>&middot;</span></span>
+        <span class="marquee-item">Information Architecture <span>&middot;</span></span>
+        <span class="marquee-item">UX Research <span>&middot;</span></span>
+        <span class="marquee-item">Healthcare Policy <span>&middot;</span></span>
+        <span class="marquee-item">Figma <span>&middot;</span></span>
+        <span class="marquee-item">Accessibility <span>&middot;</span></span>
+        <span class="marquee-item">Ethical Design <span>&middot;</span></span>
+        <span class="marquee-item">Content Strategy <span>&middot;</span></span>
+        <span class="marquee-item">Civil Rights <span>&middot;</span></span>
+        <span class="marquee-item">Usability Testing <span>&middot;</span></span>
+        <span class="marquee-item">AI Governance <span>&middot;</span></span>
+        <span class="marquee-item">Information Architecture <span>&middot;</span></span>
+      </div>
+    </div>
+
+    <div class="intro-strip">
+      <div class="intro-cell">
+        <div class="intro-cell-num">10<sup>+</sup></div>
+        <div class="intro-cell-label">User interviews conducted across Nexus and Healing Without Bias</div>
+      </div>
+      <div class="intro-cell">
+        <div class="intro-cell-num">30<sup>%</sup></div>
+        <div class="intro-cell-label">Navigation efficiency gain from Nexus redesign, validated in usability testing</div>
+      </div>
+      <div class="intro-cell">
+        <div class="intro-cell-num">4</div>
+        <div class="intro-cell-label">End-to-end UX projects shipped - including a live client engagement at Cornell</div>
+      </div>
+    </div>
+
+    <section class="work-section">
+      <div class="work-header">
+        <h2>Selected work</h2>
+        <a href="projects.html" class="btn btn-outline">All projects &rarr;</a>
+      </div>
+
+      <a href="projects.html#healing" class="project-row">
+        <div class="project-row-index">01</div>
+        <div>
+          <div class="project-row-title">Healing Without Bias <span class="project-arrow">↗</span></div>
+          <p class="project-row-desc">A live platform educating Black women about the Medicaid coverage gap, their civil rights in healthcare, and the systemic bias they face - designed to be readable without a legal background.</p>
+        </div>
+        <div class="project-row-meta">
+          <div class="project-row-tag">End-to-end UX &middot; 2026</div>
+          <div class="project-row-pills">
+            <span class="pill">Research</span>
+            <span class="pill">Content strategy</span>
+            <span class="pill">Accessibility</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="projects.html#nexus" class="project-row">
+        <div class="project-row-index">02</div>
+        <div>
+          <div class="project-row-title">Nexus <span class="project-arrow">↗</span></div>
+          <p class="project-row-desc">A mobile platform removing institutional barriers for transfer students. 10+ user interviews, full Figma prototype - redesigned navigation improved resource access by 30%.</p>
+        </div>
+        <div class="project-row-meta">
+          <div class="project-row-tag">Mobile UX &middot; 2024</div>
+          <div class="project-row-pills">
+            <span class="pill">Figma</span>
+            <span class="pill">Interviews</span>
+            <span class="pill">Testing</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="projects.html#ithaca" class="project-row">
+        <div class="project-row-index">03</div>
+        <div>
+          <div class="project-row-title">Ithaca Soap <span class="project-arrow">↗</span></div>
+          <p class="project-row-desc">User interviews, affinity diagrams, multiple design iterations, and a fully coded accessible app - built for a real client, Ithaca Soap, over one semester at Cornell.</p>
+        </div>
+        <div class="project-row-meta">
+          <div class="project-row-tag">Client work &middot; Spring 2025</div>
+          <div class="project-row-pills">
+            <span class="pill">Client collab</span>
+            <span class="pill">Mobile + web</span>
+            <span class="pill">Coded prototype</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="projects.html#tiktok" class="project-row">
+        <div class="project-row-index">04</div>
+        <div>
+          <div class="project-row-title">TikTok Creator Tools <span class="project-arrow">↗</span></div>
+          <p class="project-row-desc">Identified usability gaps and misinformation risks in TikTok&rsquo;s editing flow. Redesigned with transparency indicators and friction prompts, validated through high-fidelity Figma prototypes.</p>
+        </div>
+        <div class="project-row-meta">
+          <div class="project-row-tag">Case study &middot; 2023</div>
+          <div class="project-row-pills">
+            <span class="pill">Figma</span>
+            <span class="pill">Heuristics</span>
+            <span class="pill">Trust</span>
+          </div>
+        </div>
+      </a>
+
+
+    </section>
+
+    <section class="about-section">
+      <div>
+        <p class="section-eyebrow">About</p>
+        <h2>Design isn&rsquo;t just how something looks</h2>
+        <div class="about-text">
+          <p>It&rsquo;s who it includes and who it leaves out. That&rsquo;s the lens I bring to every project.</p>
+          <p>I have a B.A. in Information Science from Cornell, with concentrations in UX Design and Law, Ethics &amp; Policy, and an M.A. in Ethics &amp; Society from Fordham. Before design, I advocated on climate and equity policy, led programs for hundreds of students, and taught UX methodology at Cornell.</p>
+          <p>I&rsquo;m drawn to problems where the stakes are high and the users are the most overlooked. Healthcare policy, institutional barriers, creator trust - these aren&rsquo;t abstract design briefs. They&rsquo;re the things I&rsquo;ve spent the last four years researching, advocating for, and now designing around.</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="section-eyebrow">Skills</p>
+        <div class="skill-group">
+          <div class="skill-group-label">UX and design</div>
+          <div class="skill-list">Figma &middot; Wireframing &middot; Prototyping &middot; Information architecture &middot; Usability testing &middot; Accessibility &middot; Content strategy</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Research</div>
+          <div class="skill-list">User interviews &middot; Heuristic analysis &middot; Qualitative methods &middot; Policy research &middot; Affinity mapping &middot; Synthesis</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Technical</div>
+          <div class="skill-list">HTML5 &middot; CSS3 &middot; Python &middot; JavaScript &middot; Data visualization &middot; AI governance</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Languages</div>
+          <div class="skill-list">English (native) &middot; French (intermediate) &middot; Spanish (intermediate)</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voice-block">
+      <div>
+        <div class="voice-quote">
+          &ldquo;I didn&rsquo;t start in design. I started in <em>advocacy</em> - and I never really left.&rdquo;
+        </div>
+        <div class="voice-attr">Kelly Ankoue &middot; Designer</div>
+      </div>
+      <div class="voice-context">
+        Four years of policy research, community organizing, and fighting for people who get left out of the systems meant to serve them - that&rsquo;s what I bring to every design brief. When I redesign a navigation or rewrite a legal definition in plain language, I&rsquo;m not just solving a UX problem. I&rsquo;m making something that works for the people who need it most.
+      </div>
+    </section>
+
+
+    <section class="cta-section">
+      <div>
+        <h2>Let&rsquo;s work together</h2>
+        <p>Open to entry-level product design and UX research roles - New York and remote.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="mailto:kellyankoue03@gmail.com" class="btn btn-dark">Email me</a>
+        <a href="https://www.linkedin.com/in/kelly-ankoue-128665218/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Kelly Ankoue</span>
+    <div class="footer-links">
+      <a href="mailto:kellyankoue03@gmail.com">kellyankoue03@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kelly-ankoue-128665218/" target="_blank">LinkedIn</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

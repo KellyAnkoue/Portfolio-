@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience - Kelly Ankoue</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.page-header{padding:3rem 0 2.5rem;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.page-header h1{font-family:var(--serif);font-size:clamp(32px,5vw,48px);font-weight:400;letter-spacing:-0.025em}
+.page-header p{font-size:14px;color:var(--ink-3);margin-top:0.4rem;font-weight:300}
+
+.exp-chapter{padding:2.5rem 0;border-bottom:1px solid var(--rule)}
+.exp-chapter-label{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.75rem}
+
+.edu-row{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.edu-card{border-top:2px solid var(--ink);padding-top:1rem}
+.edu-school{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:-0.01em;margin-bottom:0.25rem}
+.edu-degree{font-size:13px;color:var(--ink-2);margin-bottom:0.2rem;font-weight:300}
+.edu-date{font-size:12px;color:var(--ink-4);font-family:var(--serif);font-style:italic;margin-bottom:0.6rem}
+.edu-conc{font-size:12px;color:var(--ink-3)}
+.edu-conc strong{color:var(--ink);font-weight:500}
+
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:grid;grid-template-columns:150px 1fr;gap:2rem;padding:1.75rem 0;border-top:1px solid var(--rule)}
+.tl-item:last-child{border-bottom:1px solid var(--rule)}
+.tl-date{font-size:11px;color:var(--ink-4);font-family:var(--serif);font-style:italic;padding-top:3px;line-height:1.5}
+.tl-org{font-size:11px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink-3);margin-top:3px}
+.tl-title{font-size:16px;font-weight:500;margin-bottom:0.35rem;color:var(--ink)}
+.tl-desc{font-size:13px;color:var(--ink-2);line-height:1.75;font-weight:300}
+.tl-desc ul{padding-left:0;list-style:none;margin-top:0.4rem}
+.tl-desc li{padding:0.3rem 0;border-bottom:1px solid var(--paper-3);display:flex;gap:8px}
+.tl-desc li::before{content:"-";color:var(--gold);flex-shrink:0}
+.tl-desc li:last-child{border-bottom:none}
+.tl-pills{margin-top:0.6rem}
+
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.skill-group-label{font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+.skill-list{font-size:13px;color:var(--ink-2);line-height:1.8}
+
+@media(max-width:640px){
+  .page-header{flex-direction:column;align-items:flex-start}
+  .edu-row{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr;gap:0.5rem}
+  .skills-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Kelly Ankoue<span class="nav-dot"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <div class="page-header">
+      <div>
+        <h1>Experience</h1>
+        <p>Design, research, advocacy, and community - all pointing in the same direction.</p>
+      </div>
+      <a href="files/Kelly_Ankoue_Resume.pdf" download class="btn btn-dark">Download resume &darr;</a>
+    </div>
+
+    <!-- EDUCATION -->
+    <section class="exp-chapter">
+      <div class="exp-chapter-label">Education</div>
+      <div class="edu-row">
+        <div class="edu-card">
+          <div class="edu-school">Fordham University</div>
+          <div class="edu-degree">M.A. in Ethics and Society</div>
+          <div class="edu-date">May 2026</div>
+          <div class="edu-conc">Concentration: <strong>Ethics, Law and Policy</strong></div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-school">Cornell University</div>
+          <div class="edu-degree">B.A. in Information Science</div>
+          <div class="edu-date">May 2025</div>
+          <div class="edu-conc">Concentrations: <strong>UX Design &middot; Law, Ethics and Policy</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN EXPERIENCE -->
+    <section class="exp-chapter">
+      <div class="exp-chapter-label">Design experience</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Spring 2026</div>
+            <div class="tl-org">Capstone project</div>
+          </div>
+          <div>
+            <div class="tl-title">UX Designer and Researcher - Healing Without Bias</div>
+            <div class="tl-desc"><ul>
+              <li>Designed a 6-page accessible platform making healthcare law and Medicaid policy readable for users with no legal background</li>
+              <li>Ran iterative content and layout audits, refining hierarchy and wayfinding across multiple review cycles</li>
+              <li>Grounded every design decision in original policy research on structural racism and the Medicaid coverage gap</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">UX research</span><span class="pill">Content strategy</span><span class="pill">Accessibility</span><span class="pill">HTML and CSS</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">May 2024</div>
+            <div class="tl-org">Team project &middot; Cornell</div>
+          </div>
+          <div>
+            <div class="tl-title">Lead UX Designer - Nexus</div>
+            <div class="tl-desc"><ul>
+              <li>Led end-to-end UX design for a mobile platform addressing institutional barriers for transfer students</li>
+              <li>Ran 10+ user interviews; redesigned navigation based on findings, improving resource access efficiency by 30%</li>
+              <li>Delivered full Figma prototype across two tested iterations with documented design rationale</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Figma</span><span class="pill">User interviews</span><span class="pill">Mobile design</span><span class="pill">Usability testing</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Spring 2025</div>
+            <div class="tl-org">INFO 4340 &middot; Cornell</div>
+          </div>
+          <div>
+            <div class="tl-title">UX Designer and Developer - Ithaca Soap</div>
+            <div class="tl-desc"><ul>
+              <li>Designed a mobile app for a real client through user interviews, six affinity diagram themes, multiple prototype iterations, and live client feedback at every milestone</li>
+              <li>Synthesized research into three core app features: product comparison, scannable ingredient stats, and build-a-bundle customization</li>
+              <li>Coded the final prototype to high-fidelity using Git workflows and real development tools</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Affinity diagrams</span><span class="pill">Client collaboration</span><span class="pill">Prototyping</span><span class="pill">Accessibility</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Jan&ndash;May 2023</div>
+            <div class="tl-org">Case study &middot; Cornell</div>
+          </div>
+          <div>
+            <div class="tl-title">UX Designer and Strategist - TikTok Creator Tools</div>
+            <div class="tl-desc"><ul>
+              <li>Identified usability gaps and misinformation risks through heuristic analysis; redesigned creator flows with transparency indicators and friction prompts</li>
+              <li>Built and iterated high-fidelity Figma prototypes validated through usability testing over a 10-week sprint</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Figma</span><span class="pill">Heuristic analysis</span><span class="pill">Prototyping</span><span class="pill">Trust and safety</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section class="exp-chapter">
+      <div class="exp-chapter-label">Work experience</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Aug 2025&ndash;May 2026</div>
+            <div class="tl-org">Fordham University</div>
+          </div>
+          <div>
+            <div class="tl-title">Graduate Assistant - Ethics and Society Dept.</div>
+            <div class="tl-desc"><ul>
+              <li>Produced research briefs and policy documents for 3 department heads under tight deadlines</li>
+              <li>Reviewed and edited 25+ published articles, coordinating multi-stakeholder feedback cycles</li>
+              <li>Maintained communications systems and tracked engagement metrics across platforms</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Policy research</span><span class="pill">Documentation</span><span class="pill">Stakeholder communication</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">May 2020&ndash;Jul 2023</div>
+            <div class="tl-org">360 Plus</div>
+          </div>
+          <div>
+            <div class="tl-title">Advocate and Program Lead</div>
+            <div class="tl-desc"><ul>
+              <li>Led 5+ cross-functional workshops for 100+ participants, owning end-to-end logistics, communications, and documentation</li>
+              <li>Conducted policy research on climate, classism, and racism; distilled findings into actionable recommendations for leadership</li>
+              <li>Collaborated with international teams to develop technology-driven policy solutions across cultural contexts</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Program management</span><span class="pill">Policy research</span><span class="pill">Cross-cultural collaboration</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="exp-chapter">
+      <div class="exp-chapter-label">Leadership and community</div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Jun 2023&ndash;May 2025</div>
+            <div class="tl-org">Cornell University</div>
+          </div>
+          <div>
+            <div class="tl-title">External Relations - Black Students United</div>
+            <div class="tl-desc"><ul>
+              <li>Coordinated career workshops and community programs for 35+ students, managing communications and stakeholder relationships</li>
+              <li>Led supply drives, outcome tracking, and post-secondary pathway programming across academic years</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Community building</span><span class="pill">Student advocacy</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Jan 2022&ndash;Dec 2024</div>
+            <div class="tl-org">Cornell University</div>
+          </div>
+          <div>
+            <div class="tl-title">Co-Mentorship Chair - Underrepresented Minorities in Computing</div>
+            <div class="tl-desc"><ul>
+              <li>Designed and ran biweekly mentorship programming for 70+ participants over two years</li>
+              <li>Facilitated monthly networking events connecting students with tech industry leaders</li>
+            </ul></div>
+            <div class="tl-pills"><span class="pill">Mentorship</span><span class="pill">Equity in tech</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">Dec 2023&ndash;May 2025</div>
+            <div class="tl-org">Cornell University</div>
+          </div>
+          <div>
+            <div class="tl-title">Social Media and Design Chair - Baraka Kwa Wimbo</div>
+            <div class="tl-desc">Designed all visual communications for a Swahili acappella group - concert posters, recruitment, and semester recaps. Built and maintained consistent visual identity across platforms.</div>
+            <div class="tl-pills"><span class="pill">Graphic design</span><span class="pill">Brand identity</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div>
+            <div class="tl-date">May 2023&ndash;May 2025</div>
+            <div class="tl-org">Cornell University</div>
+          </div>
+          <div>
+            <div class="tl-title">Design Chair - Phenomenon Step Team</div>
+            <div class="tl-desc">Created recruitment flyers, event promotion, and campaign materials blending step culture aesthetics with community storytelling.</div>
+            <div class="tl-pills"><span class="pill">Graphic design</span><span class="pill">Campaign strategy</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="exp-chapter" style="border-bottom:none">
+      <div class="exp-chapter-label">Skills</div>
+      <div class="skills-grid">
+        <div>
+          <div class="skill-group-label">UX and design</div>
+          <div class="skill-list">Figma &middot; Wireframing &middot; Prototyping &middot; Information architecture &middot; Usability testing &middot; Accessibility &middot; Content strategy &middot; Iterative design</div>
+        </div>
+        <div>
+          <div class="skill-group-label">Research</div>
+          <div class="skill-list">User interviews &middot; Affinity diagrams &middot; Heuristic analysis &middot; Qualitative methods &middot; Persona development &middot; Policy research</div>
+        </div>
+        <div style="margin-top:1.25rem">
+          <div class="skill-group-label">Technical</div>
+          <div class="skill-list">HTML5 &middot; CSS3 &middot; Python &middot; JavaScript &middot; Data visualization &middot; AI governance &middot; Git</div>
+        </div>
+        <div style="margin-top:1.25rem">
+          <div class="skill-group-label">Languages</div>
+          <div class="skill-list">English (native) &middot; French (intermediate) &middot; Spanish (intermediate)</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Kelly Ankoue</span>
+    <div class="footer-links">
+      <a href="mailto:kellyankoue03@gmail.com">kellyankoue03@gmail.com</a>
+      <a href="https://www.linkedin.com/in/kelly-ankoue-128665218/" target="_blank">LinkedIn</a>
+      <a href="files/Kelly_Ankoue_Resume.pdf" download>Download resume</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
